@@ -1,0 +1,62 @@
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: slategrey;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.big{
+  font-size:15px !important;
+}
+
+.required{
+    font-size: 13px;
+    font-family: "Roboto Mono", monospace;
+    position: relative;
+    left: -3px;
+    color: rgb(255, 0, 0);
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+
+.container {
+  margin: 10px 0;
+  
+  & .react-live {
+    position: relative;
+  }
+
+  & .react-live-preview {
+    white-space: normal;
+    padding: 20px;
+    border-radius: 3px 3px 0 0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & .prism-code {
+    padding: 8px 16px;
+    background: #20222b;
+    overflow-x: auto;
+    font-family: monospace;
+    border-top-width: 0;
+    border-radius: 0 0 3px 3px;
+  }
+  & .react-live-error {
+    color: red;
+    padding: 5px;
+  }
+}
