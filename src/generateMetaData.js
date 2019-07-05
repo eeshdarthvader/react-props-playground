@@ -1,6 +1,8 @@
+
 import glob from 'glob';
 import * as fs from 'fs';
 import * as docgen from 'react-docgen';
+
 
 const javascriptFiles = glob.sync('src/*/*.js');
 

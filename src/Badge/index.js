@@ -37,7 +37,7 @@ const Badge = props => {
 Badge.propTypes = {
   /** Children of the type: node*/
   children: PropTypes.string.isRequired,
-  /** Enable or disable the badge */
+  /** Enable or disable the badge  */
   disabled: PropTypes.bool,
   /** Custom classname */
   className: PropTypes.string,
