@@ -15,6 +15,32 @@ const Type = styled.div`
   color: red;
 `;
 
+const Table = styled.table`
+  width: 80%;
+  margin: 80px auto;
+  white-space: normal;
+  th,
+  td {
+    text-align: left;
+    padding: 2px 2px;
+    vertical-align: middle;
+    position: relative;
+    color: black;
+  }
+  th {
+    border-bottom: 2px solid #ddd;
+  }
+  td {
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    text-transform: uppercase;
+    font-weight: 12px;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
+`;
+
 class Props extends React.Component {
   constructor(props) {
     super(props);
@@ -38,7 +64,7 @@ class Props extends React.Component {
     const keys = Object.keys(propData).filter(key => key[0] !== "_");
 
     return (
-      <table>
+      <Table>
         <thead>
           <tr>
             <th>Name</th>
@@ -63,17 +89,19 @@ class Props extends React.Component {
               <td>
                 <code>{getDefaultValue(propData[key])}</code>
               </td>
-              {!propData[key].required && (
-                <PropSwitcher
-                  propName={key}
-                  data={propData[key]}
-                  onPropsChange={this.onPropsChange.bind(this)}
-                />
-              )}
+              <td>
+                {!propData[key].required && (
+                  <PropSwitcher
+                    propName={key}
+                    data={propData[key]}
+                    onPropsChange={this.onPropsChange.bind(this)}
+                  />
+                )}
+              </td>
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
     );
   }
 }
